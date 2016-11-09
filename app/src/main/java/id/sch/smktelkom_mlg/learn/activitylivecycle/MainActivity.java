@@ -55,5 +55,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy: ");
+        if (mediaPlayer != null)
+            mediaPlayer.release();
     }
 }
